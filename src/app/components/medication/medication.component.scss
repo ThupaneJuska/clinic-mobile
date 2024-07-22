@@ -1,0 +1,110 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.main-div {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.back {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.med {
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.med h2 {
+    margin: 0;
+    font-size: 1.9em;
+}
+
+.search-div {
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0; /* Prevents shrinking */
+}
+
+.search-div input {
+    height: 55%;
+    width: 97%;
+    border-radius: 8px;
+    border: none;
+    color: #8ba5b8;
+    background-color: #e8eef2;
+    font-size: 1.3em;
+    padding-left: 40px;
+    box-sizing: border-box;
+    flex-shrink: 0; /* Prevents shrinking */
+}
+
+.search-div input:focus {
+    outline: none;
+}
+
+.meds {
+    height: calc(75% - 10px);
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    overflow-y: auto;
+    padding-bottom: 10px; /* Add padding to avoid last item being hidden */
+}
+
+.medication-name-div {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}   
+
+.med-name-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.med-name-div p {
+    margin: 0;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.med-name-div small {
+    font-size: 1em;
+    color: #8ba5b8;
+}
+
+.availability {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+}
+
+.green {
+    background-color: #098939 !important;
+}
+
+/* Specific styles for handling keyboard up */
+.main-div.keyboard-open {
+    overflow-y: auto;
+}
+
+.main-div.keyboard-open .meds {
+    height: calc(75% - 10px);
+    overflow-y: auto;
+}

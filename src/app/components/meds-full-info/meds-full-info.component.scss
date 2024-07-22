@@ -1,0 +1,54 @@
+.main-div{
+    height: 97%;
+    width: 95%;
+    margin: 10px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.close{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #8ba5b8;
+    font-size: 1.5em;
+}
+
+.image-div{
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-div img{
+    height: 80%;
+    width: 80%;
+}
+
+.med-description{
+    height: 20%;
+}
+
+.med-description small{
+    font-size: 1em;
+    color: #8ba5b8;
+}
+
+.med-description p {
+    font-size: 1.3em;
+}
+
+.availability{
+    height: 8%;
+}
+
+.availability p{
+    color: red;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.med-for{
+    color: green;
+}

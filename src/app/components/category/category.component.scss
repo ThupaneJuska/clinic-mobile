@@ -1,0 +1,42 @@
+.main-div{
+    width: 100%;;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.categoy-div{
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.categoy-div p{
+    font-size: 1.5em;
+    margin-bottom: 0;
+}
+
+.categories{
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.doctors{
+    background-color: #1f9ded;
+    color: white;
+}
+
+.medication{
+    background-color: #e8eef0;
+    color: black;
+}
+
+.btn{
+    height: 40%;
+    border: none;
+    font-size: 1.5em;
+    border-radius: 10px;
+}

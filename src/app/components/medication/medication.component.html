@@ -1,0 +1,20 @@
+<div class="main-div" [class.keyboard-open]="isKeyboardOpen">
+    <div class="med">
+        <h2>Medication</h2>
+    </div>
+    <!-- Search -->
+    <div class="search-div">
+        <input type="text" placeholder="Search Medication" [(ngModel)]="searchTerm" (input)="filterMeds()">
+    </div>
+    <!-- Meds -->
+    <div class="meds">
+        <!-- Medication -->
+        <div *ngFor="let med of filteredMeds" class="medication-name-div" (click)="medi(med)">
+            <div class="med-name-div">
+                <p>{{ med.name }}</p>
+                <small>{{ med.description }}</small>
+            </div>
+            <span class="availability" [ngStyle]="{'background-color': med.availability == 'available' ? 'green' : 'red'}"></span>
+        </div>
+    </div>
+</div>

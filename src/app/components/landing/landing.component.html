@@ -1,0 +1,44 @@
+<div class="main-landing" [class.keyboard-open]="isKeyboardOpen">
+    <div class="heading">
+        <p class="welcome">Welcome to sekgopo clinic</p>
+    </div>
+    <div class="form-div">
+        <form [formGroup]="registerForm">
+            <mat-card-title class="register">Register</mat-card-title>
+            <!-- Name -->
+            <mat-label class="label">Name</mat-label>
+            <mat-form-field appearance="outline">
+                <input type="text" matInput formControlName="name" placeholder="Juska">
+                <mat-error class="red" *ngIf="registerForm.get('name')?.hasError('required')">
+                    Name is required
+                </mat-error>
+            </mat-form-field>
+
+            <!-- Surname -->
+            <mat-label class="label">Surname</mat-label>
+            <mat-form-field appearance="outline">
+                <input type="text" matInput formControlName="surname" placeholder="Mokhabukhi">
+                <mat-error class="red" *ngIf="registerForm.get('surname')?.hasError('required')">
+                    Surname is required
+                </mat-error>
+            </mat-form-field>
+
+            <!-- Cell Number -->
+            <mat-label class="label">Cell Number</mat-label>
+            <mat-form-field appearance="outline">
+                <input type="number" matInput formControlName="cellNumber" placeholder="0712345678">
+                <mat-error class="red" *ngIf="registerForm.get('cellNumber')?.hasError('required')">
+                    Cell number is required
+                </mat-error>
+            </mat-form-field>
+
+            <!-- Buttons -->
+            <div class="buttons">
+                <div class="proceed" (click)="submit()">
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </div>
+            </div>
+            <small class="terms-condition">By continuing you agree to our Terms of Service and <br>Private Policy <small class="terms">?</small></small>
+        </form>
+    </div>
+</div>
