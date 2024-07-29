@@ -1,0 +1,100 @@
+.main-div{
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.image-div{
+    height: 40%;
+}
+
+.image-div img{
+    height: 100%;
+    width: 100%;
+}
+
+.welcome{
+    height: 30%;
+    margin-top: 10px;
+}
+
+.welcome p{
+    font-size: 1.7em;
+    text-align: center;
+}
+
+.welcome h2{
+    margin-bottom: 5px;
+}
+
+.demo{
+    height: 30%;
+    background-color: #7f9aff8c;
+    position: relative;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.proceed-btn{
+    position: absolute;
+    left: 35%;
+    bottom: -22px;
+    height: 24%;
+    width: 30%;
+    border: none;
+    border-radius: 10px;
+    background-color: blue;
+    color: white;
+    font-size: 1.3em;
+}
+
+.demo p{
+    font-size: 1.7em;
+    margin-bottom: 10px;
+}
+
+li{
+    padding-left: 15px !important;
+    font-size: 1.1em;
+    width: 100%;
+}
+
+ul{
+    width: 100%;
+}
+
+.stepper {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 300px;
+}
+.stepper li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 20px;
+}
+
+.stepper li:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.stepper li:after {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 28px;
+    width: 2px;
+    height: calc(30% - 28px);
+    background-color: black;
+}
+.stepper li:last-child:after {
+    display: none;
+}

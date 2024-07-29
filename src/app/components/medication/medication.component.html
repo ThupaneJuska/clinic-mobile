@@ -1,4 +1,5 @@
 <div class="main-div" [class.keyboard-open]="isKeyboardOpen">
+    <span class="material-symbols-outlined back" (click)="back()">arrow_back</span>
     <div class="med">
         <h2>Medication</h2>
     </div>
@@ -12,7 +13,7 @@
         <div *ngFor="let med of filteredMeds" class="medication-name-div" (click)="medi(med)">
             <div class="med-name-div">
                 <p>{{ med.name }}</p>
-                <small>{{ med.description }}</small>
+                <small>{{ med.description}}</small>
             </div>
             <span class="availability" [ngStyle]="{'background-color': med.availability == 'available' ? 'green' : 'red'}"></span>
         </div>

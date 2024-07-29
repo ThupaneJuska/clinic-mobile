@@ -7,6 +7,8 @@ interface Medication {
   name: string;
   description: string;
   availability: string;
+  fileId: string;
+  medFor: string;
 }
 
 @Injectable({

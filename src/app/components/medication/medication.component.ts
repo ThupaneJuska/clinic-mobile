@@ -2,11 +2,14 @@ import { Component, HostListener } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ApiServiceService } from 'src/app/services/api-service.service';
 import { MedsFullInfoComponent } from '../meds-full-info/meds-full-info.component';
+import { Router } from '@angular/router';
 
 interface Medication {
   name: string;
   description: string;
   availability: string;
+  fileId: string;
+  medFor: string;
 }
 
 @Component({
@@ -22,7 +25,7 @@ export class MedicationComponent {
   medications: Medication[] = [];
   filteredMeds: Medication[] = [];
 
-  constructor(private auth: ApiServiceService, private dialog: MatDialog) {
+  constructor(private auth: ApiServiceService, private dialog: MatDialog, private router: Router) {
     this.fetchMedications();
   }
 
@@ -58,7 +61,9 @@ export class MedicationComponent {
         this.medications = res.map((med: Medication) => ({
           name: med.name,
           description: med.description,
-          availability: med.availability
+          availability: med.availability,
+          fileId: med.fileId,
+          medFor: med.medFor
         }));
         this.filteredMeds = this.medications;
       },
@@ -69,10 +74,18 @@ export class MedicationComponent {
   }
 
   medi(i:any){
-    console.log("Cliked",i.name)
+    console.log("Cliked",i)
+    const dialogData = {
+      medData: i 
+    };
     this.dialog.open(MedsFullInfoComponent,{
       height:'70%',
-      width:'90%'
+      width:'90%',
+      data: dialogData
     })
+  }
+
+  back(){
+    this.router.navigate(['/category'])
   }
 }

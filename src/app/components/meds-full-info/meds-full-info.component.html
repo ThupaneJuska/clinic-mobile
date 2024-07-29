@@ -1,14 +1,14 @@
 <div class="main-div">
     <p class="no-margin close" (click)="close()">X</p>
     <div class="availability">
-        <p class="no-margin">Not availabe</p>
+        <p class="no-margin" [ngStyle]="{color: availability  === 'available' ? 'green':'red'}">{{availability | titlecase}}</p>
     </div>
     <div class="image-div">
-        <img src="../../../assets/images/panado.jpg" alt="Panado">
+        <img [src]="imageUrl" alt="Panado">
     </div>
     <div class="med-description">
-        <p class="no-margin">Panado Paracetamol</p>
-        <small>500mg 24-Tablets</small>
-        <p class="no-margin med-for">Headache | toothache | cold and flu</p>
+        <p class="no-margin">{{medName | titlecase}}</p>
+        <small>{{description}}</small>
+        <p class="no-margin med-for">{{medFor}}</p>
     </div>
 </div>

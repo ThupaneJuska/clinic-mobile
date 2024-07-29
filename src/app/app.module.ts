@@ -11,6 +11,7 @@ import { CategoryComponent } from './components/category/category.component';
 import { MedicationComponent } from './components/medication/medication.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MedsFullInfoComponent } from './components/meds-full-info/meds-full-info.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MedsFullInfoComponent } from './components/meds-full-info/meds-full-inf
     LandingComponent,
     CategoryComponent,
     MedicationComponent,
-    MedsFullInfoComponent
+    MedsFullInfoComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

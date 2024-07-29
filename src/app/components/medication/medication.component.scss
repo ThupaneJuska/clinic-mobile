@@ -12,6 +12,7 @@ html, body {
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
+    position: relative;
 }
 
 .back {
@@ -107,4 +108,9 @@ html, body {
 .main-div.keyboard-open .meds {
     height: calc(75% - 10px);
     overflow-y: auto;
+}
+
+.for{
+    height: 20px;
+    background-color: antiquewhite;
 }

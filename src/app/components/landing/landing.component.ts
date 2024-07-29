@@ -48,6 +48,7 @@ export class LandingComponent {
     }
 
     else{
+      localStorage.setItem('user', JSON.stringify(this.registerForm.value))
       this.router.navigate(['/category'])
     }
 
